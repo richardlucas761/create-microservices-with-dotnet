@@ -4,15 +4,34 @@ Experiments with the "Create cloud-native apps and services with .NET and ASP.NE
 
 <https://learn.microsoft.com/en-gb/training/paths/create-microservices-with-dotnet/>
 
-I started out using [VS Codium](https://github.com/VSCodium/vscodium) but had some issues with the *Dev Containers* extension alternative in VS Codium so switched to VS Code for this learning as the path of least resistance or closest to the instructions I'm following.
+Limited success with this so far after trying various options.
 
-## Build your first microservice with .NET
+## Various options
 
-<https://learn.microsoft.com/en-gb/training/modules/dotnet-microservices/>
+| Approach | Notes |
+|-------|-----|
+| GitHub Codespaces | <https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly? |
+| Running locally in VS Code on Windows 10 | See Windows 10 below, issues getting the container to run. |
+| Running locally in VS Code on Linux Mint | To be attempted... |
 
-### GitHub Codespace or VS Code / VS Codium?
+## VS Code versus VS Codium
 
-I chose to use VS Codium then VS Code for this exercise, mainly because the **Codespace** creation link talked about it being "paid for" by me so the pricing policy wasn't clear.
+I started out using [VS Codium](https://github.com/VSCodium/vscodium) but had some issues with the *Dev Containers* extension alternative in VS Codium so switched to VS Code for this learning as the path of least resistance or closest to the Microsoft instructions I'm following.
+
+## GitHub Codespaces
+
+I was expecting the environment to be already set up but this command after rebuilding the container as prompted failed in the Terminal?
+
+```
+cd ./dotnet-docker 
+ dotnet publish /p:PublishProfile=DefaultContainer
+ ```
+
+ ```
+ bash: dotnet: command not found
+ ```
+
+## Windows 10
 
 ### Fork of mslearn-dotnet-cloudnative
 
