@@ -4,15 +4,16 @@ Experiments with the "Create cloud-native apps and services with .NET and ASP.NE
 
 <https://learn.microsoft.com/en-gb/training/paths/create-microservices-with-dotnet/>
 
-Limited success with this so far after trying various options.
+Limited local success with this so far after trying various options.
 
 ## Various options
 
 | Approach | Notes |
 |-------|-----|
-| GitHub Codespaces | <https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly? |
-| Running locally in VS Code on Windows 10 | See Windows 10 below, issues getting the container to run. |
-| Running locally in VS Code on Linux Mint | To be attempted... |
+|GitHub Codespaces|<https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly?|
+|Running locally in VS Code on Windows 10| See Windows 10 below, issues getting the container to run.|
+|Running locally in VS Code on Linux Mint| To be attempted...|
+|Running locally in Visual Studio|Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson.|
 
 ## VS Code versus VS Codium
 
