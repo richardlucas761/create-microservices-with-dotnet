@@ -13,7 +13,7 @@ Limited local success with this so far after trying various options.
 |GitHub Codespaces|<https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly?|
 |Running locally in VS Code on Windows 10| See Windows 10 below, issues getting the container to run.|
 |Running locally in VS Code on Linux Mint| To be attempted...|
-|Running locally in Visual Studio|Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson.|
+|Running locally in Visual Studio|Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)|
 
 ## VS Code versus VS Codium
 
