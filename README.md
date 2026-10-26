@@ -128,3 +128,7 @@ tps://github.com/devcontainers/features/tree/main/src/docker-outside-of-docker f
 or help troubleshooting this error.
 [2026-10-26T11:01:38.725Z] 
 ```
+
+## Linux Mint
+
+To be attempted...
