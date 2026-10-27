@@ -133,7 +133,7 @@ or help troubleshooting this error.
 [2026-10-26T11:01:38.725Z] 
 ```
 
-### Running locally in Visual Studio on Windows 11
+### Running just the API locally in Visual Studio on Windows 11
 
 Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)
 
