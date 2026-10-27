@@ -1,25 +1,20 @@
 # create-microservices-with-dotnet
 
-Experiments with the "Create cloud-native apps and services with .NET and ASP.NET Core" learning path on Microsoft Learn.
+Experiments and *stream-of-consciousness* thoughts with the "Create cloud-native apps and services with .NET and ASP.NET Core" learning path on Microsoft Learn.
 
 <https://learn.microsoft.com/en-gb/training/paths/create-microservices-with-dotnet/>
 
-Limited local success with this so far after trying various options.
-
-## Various options
-
-| Approach | Notes |
-|-------|-----|
-|GitHub Codespaces|<https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly?|
-|Running locally in VS Code on Windows 10| See Windows 10 below, issues getting the container to run.|
-|Running locally in VS Code on Linux Mint| To be attempted...|
-|Running locally in Visual Studio|Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)|
+Limited success with this so far after trying various options. There is probably a "cloud native development" learning curve here which is complicating things, although I would be surprised if modern developers are all using Linux to develop rather than Windows 11 so it must be possible.
 
 ## VS Code versus VS Codium
 
 I started out using [VS Codium](https://github.com/VSCodium/vscodium) but had some issues with the *Dev Containers* extension alternative in VS Codium so switched to VS Code for this learning as the path of least resistance or closest to the Microsoft instructions I'm following.
 
-## GitHub Codespaces
+## Various options attempted
+
+### GitHub Codespaces
+
+<https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly?
 
 I was expecting the environment to be already set up but this command after rebuilding the container as prompted failed in the Terminal?
 
@@ -32,9 +27,17 @@ cd ./dotnet-docker
  bash: dotnet: command not found
  ```
 
-## Windows 10
+ *This* note suggests both Docker and .NET SDK should be present in the GitHub Codespace and you would have hoped the "pre configured" option would have both of them but not sure how to check this is actually installed?
 
-### Fork of mslearn-dotnet-cloudnative
+ ```
+ You can complete this exercise in an instance of GitHub Codespaces that has Docker and the .NET SDK preinstalled. When you use these tools and techniques in your own development environment, make sure that you have these prerequisites installed.
+ ```
+
+### Running locally in VS Code on Windows 11
+
+Fatal errors were encountered getting this running in VS Code on Windows 11 which are detailed below.
+
+#### Fork of mslearn-dotnet-cloudnative
 
 The learning path suggests cloning this repo:
 
@@ -44,7 +47,7 @@ But I chose to create my own fork instead so I can tinker with the code:
 
 <https://github.com/richardlucas761/mslearn-dotnet-cloudnative>
 
-### System Requirements for running Dev Container
+#### System Requirements for running Dev Container
 
 I needed to install *Docker Desktop* and also *WSL 2*.
 
@@ -52,7 +55,7 @@ I have various versions of PowerShell installed on my PC and *this* command didn
 
 ```wsl --install```
 
-### Dev Containers extension and the alternative for VS Codium
+#### Dev Containers extension and the alternative for VS Codium
 
 The "Developing inside a Container" page here <https://code.visualstudio.com/docs/devcontainers/containers> asks me to install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in VS Code.
 
@@ -60,7 +63,7 @@ This would be a simple one-click install from the Marketplace website if I wasn'
 
 The suggestion seems to be to use this extension instead in VSCodium <https://open-vsx.org/extension/s-h-a-d-o-w/dev-containers-oss> but I couldn't get that working, will come back to that later possibly.
 
-### >Dev Containers: Rebuild and Reopen in Container
+#### >Dev Containers: Rebuild and Reopen in Container
 
 Attempting to create the development container locally *this* information message was displayed, will assume this isn't a hard requirement and chose to "Continue".
 
@@ -78,7 +81,7 @@ devcontainer.json: CPUs 4, RAM 8gb
 [Continue] [Cancel]
 ```
 
-### "An error occurred setting up the container."
+#### "An error occurred setting up the container."
 
 This error was displayed with some debugging information in the log but it's not clear which of the messages would be useful to include here.
 
@@ -94,7 +97,7 @@ An error occurred setting up the container.
 [Retry] [Edit devcontainer.json Locally] [More Actions...]
 ```
 
-### .devcontainer\dotnet-docker\devcontainer.json
+#### .devcontainer\dotnet-docker\devcontainer.json
 
 The *devcontainer.json* file includes these extensions which weren't installed in VS Code but installing these didn't fix the issue.
 
@@ -110,7 +113,7 @@ The *devcontainer.json* file includes these extensions which weren't installed i
     },
 ```
 
-### docker-outside-of-docker error
+#### docker-outside-of-docker error
 
 The log file contains this error which is a little garbled but suggests I can look here to troubleshoot the error as "command not found" implies there is something missing from the local installation.
 
@@ -130,6 +133,18 @@ or help troubleshooting this error.
 [2026-10-26T11:01:38.725Z] 
 ```
 
-## Linux Mint
+### Running locally in Visual Studio on Windows 11
 
-To be attempted...
+Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)
+
+### Running locally in VS Code on Linux Mint (dual boot)
+
+To be attempted, dual boot install on my main PC is running on a spinning rust drive so it's *painfully* slow to use and this is probably a non starter.
+
+### Running locally in VS Code on Linux Mint / Ubuntu VM
+
+Why not just use Ubuntu as that's already set up on this PC for WSL? *TBC.*
+
+### Running locally in VS Code on Linux Mint Virtual Box
+
+Virtual Box is the virtualisation tool I've used the most and am most comfortable with, a "proper" Linux box rather than WSL might give better results? *TBC*
