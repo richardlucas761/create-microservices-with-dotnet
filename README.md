@@ -137,14 +137,10 @@ or help troubleshooting this error.
 
 Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)
 
-### 4. Running locally in VS Code on Linux Mint (dual boot)
-
-To be attempted, dual boot install on my main PC is running on a spinning rust drive so it's *painfully* slow to use and this is probably a non starter.
-
-### 5. Running locally in VS Code on Linux Mint / Ubuntu VM
+### 4. Running locally in VS Code on Linux Mint / Ubuntu VM
 
 Why not just use Ubuntu as that's already set up on this PC for WSL? *TBC.*
 
-### 6. Running locally in VS Code on Linux Mint running in Virtual Box
+### 5. Running locally in VS Code on Linux Mint running in Virtual Box
 
 Virtual Box is the virtualisation tool I've used the most and am most comfortable with, but there was a limitation here of a lack of virtualisation support inside the Virtual Box client. Inception, anyone?
