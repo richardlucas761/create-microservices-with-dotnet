@@ -4,7 +4,7 @@ Experiments and *stream-of-consciousness* thoughts with the "Create cloud-native
 
 <https://learn.microsoft.com/en-gb/training/paths/create-microservices-with-dotnet/>
 
-Limited success with this so far after trying various options. There is probably a "cloud native development" learning curve here which is complicating things, although I would be surprised if modern developers are all using Linux to develop rather than Windows 11 so it must be possible.
+Limited success with this so far after trying various options. There is probably a "cloud native development" learning curve here which is complicating things, although I would be surprised if modern developers are all using Linux to develop rather than Windows 11 so it must be *possible*, it's just proving very difficult to get the Docker container to launch.
 
 ## VS Code versus VS Codium
 
@@ -12,7 +12,7 @@ I started out using [VS Codium](https://github.com/VSCodium/vscodium) but had so
 
 ## Various options attempted
 
-### GitHub Codespaces
+### 1. GitHub Codespaces
 
 <https://github.com/features/codespaces> "Codespaces is free for individual use up to 60 hours a month and comes with simple, pay-as-you-go pricing after that." and it's not clear how I could share my experiments in this environment publicly?
 
@@ -33,7 +33,7 @@ cd ./dotnet-docker
  You can complete this exercise in an instance of GitHub Codespaces that has Docker and the .NET SDK preinstalled. When you use these tools and techniques in your own development environment, make sure that you have these prerequisites installed.
  ```
 
-### Running locally in VS Code on Windows 11
+### 2. Running locally in VS Code on Windows 11
 
 Fatal errors were encountered getting this running in VS Code on Windows 11 which are detailed below.
 
@@ -133,18 +133,18 @@ or help troubleshooting this error.
 [2026-10-26T11:01:38.725Z] 
 ```
 
-### Running just the API locally in Visual Studio on Windows 11
+### 3. Running just the API locally in Visual Studio on Windows 11
 
 Modify *mslearn-dotnet-cloudnative\dotnet-docker\Products\appsettings.json* to use a local database and just run the Products API locally, ignoring the complication of Docker completely, but this kind of defeats the object of the lesson. (This was a lot simpler when OpenShift did a lot of this for me!)
 
-### Running locally in VS Code on Linux Mint (dual boot)
+### 4. Running locally in VS Code on Linux Mint (dual boot)
 
 To be attempted, dual boot install on my main PC is running on a spinning rust drive so it's *painfully* slow to use and this is probably a non starter.
 
-### Running locally in VS Code on Linux Mint / Ubuntu VM
+### 5. Running locally in VS Code on Linux Mint / Ubuntu VM
 
 Why not just use Ubuntu as that's already set up on this PC for WSL? *TBC.*
 
-### Running locally in VS Code on Linux Mint Virtual Box
+### 6. Running locally in VS Code on Linux Mint running in Virtual Box
 
-Virtual Box is the virtualisation tool I've used the most and am most comfortable with, a "proper" Linux box rather than WSL might give better results? *TBC*
+Virtual Box is the virtualisation tool I've used the most and am most comfortable with, but there was a limitation here of a lack of virtualisation support inside the Virtual Box client. Inception, anyone?
